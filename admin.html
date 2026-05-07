@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h2>University</h2>
+
+        <ul>
+
+            <li>📊 Dashboard</li>
+
+            <li>📅 Classes</li>
+
+            <li>👨‍🏫 Teachers</li>
+
+            <li>📢 Notices</li>
+
+            <li>⚙️ Settings</li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+        <div class="topbar">
+
+            <h1>Admin Dashboard</h1>
+
+        </div>
+
+        <!-- FORM -->
+        <div class="form-box">
+
+            <input
+            type="text"
+            id="subject"
+            placeholder="Subject">
+
+            <input
+            type="text"
+            id="teacher"
+            placeholder="Teacher">
+
+            <input
+            type="text"
+            id="room"
+            placeholder="Room">
+
+            <input
+            type="number"
+            id="startHour"
+            placeholder="Start">
+
+            <input
+            type="number"
+            id="endHour"
+            placeholder="End">
+
+            <button
+            id="saveBtn"
+            onclick="addClass()">
+
+            Add Class
+
+            </button>
+
+        </div>
+
+        <!-- MESSAGE -->
+        <h3 id="message"></h3>
+
+        <!-- TABLE -->
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Subject</th>
+
+                    <th>Teacher</th>
+
+                    <th>Room</th>
+
+                    <th>Time</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="classTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script
+type="module"
+src="js/admin.js">
+
+</script>
+
+</body>
+</html>
