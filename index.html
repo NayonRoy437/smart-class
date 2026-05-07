@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>University Dashboard</title>
-    <script type="module" src="js/ui.js"></script>
+
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
+
 <a href="admin.html">
-
-<button>
-Open Admin Panel
-</button>
-
+    <button>Open Admin Panel</button>
 </a>
+
 <div class="container">
 
     <!-- SIDEBAR -->
@@ -35,17 +32,22 @@ Open Admin Panel
 
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <div class="main">
 
         <!-- TOP BAR -->
         <div class="topbar">
+
             <h1>Dashboard</h1>
 
             <div class="clock-box">
+
                 <h3 id="clock"></h3>
+
                 <p id="date"></p>
+
             </div>
+
         </div>
 
         <!-- CARDS -->
@@ -53,17 +55,17 @@ Open Admin Panel
 
             <div class="card">
                 <h3>Total Teachers</h3>
-                <h2>12</h2>
+                <h2 id="teachersCount">0</h2>
             </div>
 
             <div class="card">
                 <h3>Total Students</h3>
-                <h2>320</h2>
+                <h2 id="studentsCount">0</h2>
             </div>
 
             <div class="card">
                 <h3>Today Classes</h3>
-                <h2>6</h2>
+                <h2 id="classCount">0</h2>
             </div>
 
             <div class="card">
@@ -73,7 +75,7 @@ Open Admin Panel
 
         </div>
 
-        <!-- ROUTINE TABLE -->
+        <!-- TABLE -->
         <div class="table-section">
 
             <h2>Today's Schedule</h2>
@@ -87,26 +89,9 @@ Open Admin Panel
                     <th>Status</th>
                 </tr>
 
-                <tr class="active">
-                    <td>Web Development</td>
-                    <td>Mr. John</td>
-                    <td>10:00 AM</td>
-                    <td>Running</td>
-                </tr>
+                <tbody id="scheduleTable">
 
-                <tr>
-                    <td>Database</td>
-                    <td>Ms. Sara</td>
-                    <td>11:00 AM</td>
-                    <td>Upcoming</td>
-                </tr>
-
-                <tr>
-                    <td>Networking</td>
-                    <td>Mr. Smith</td>
-                    <td>12:00 PM</td>
-                    <td>Upcoming</td>
-                </tr>
+                </tbody>
 
             </table>
 
@@ -116,7 +101,8 @@ Open Admin Panel
 
 </div>
 
-<script src="script.js"></script>
+<!-- ONLY ONE SCRIPT -->
+<script type="module" src="js/ui.js"></script>
 
 </body>
 </html>
