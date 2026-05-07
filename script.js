@@ -2,13 +2,24 @@ function updateClock(){
 
     let now = new Date();
 
-    document.getElementById("clock").innerHTML =
-    now.toLocaleTimeString();
+    let clockEl =
+    document.getElementById("clock");
 
-    document.getElementById("date").innerHTML =
-    now.toDateString();
+    let dateEl =
+    document.getElementById("date");
 
+    // SAFETY CHECK
+    if(clockEl){
+        clockEl.innerHTML =
+        now.toLocaleTimeString();
+    }
+
+    if(dateEl){
+        dateEl.innerHTML =
+        now.toDateString();
+    }
 }
 
 setInterval(updateClock,1000);
+
 updateClock();
