@@ -130,7 +130,28 @@ window.addClass = async function(){
     }
 
     // SAVE TO FIREBASE
-    await addDoc(collection(db,"classes"),newClass);
+    if(editId){
+
+    await updateDoc(
+        doc(db,"classes",editId),
+        newClass
+    );
+
+    message.innerHTML =
+    "✅ Class Updated";
+
+    editId = null;
+
+}else{
+
+    await addDoc(
+        collection(db,"classes"),
+        newClass
+    );
+
+    message.innerHTML =
+    "✅ Class Added";
+}
 
     message.innerHTML =
     "✅ Class Added";
