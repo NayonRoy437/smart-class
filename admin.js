@@ -1,5 +1,17 @@
 import { db } from "./firebase.js";
 updateDoc
+import {
+
+collection,
+addDoc,
+deleteDoc,
+doc,
+onSnapshot,
+updateDoc
+
+}
+
+from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 import { hasConflict } from "./conflict.js";
 
 import {
