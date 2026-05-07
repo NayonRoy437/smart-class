@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart University Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎓 Smart University Admin Panel</h1>
+
+    <!-- ADD CLASS FORM -->
+    <div class="form-box">
+
+        <input type="text" id="subject" placeholder="Subject">
+
+        <input type="text" id="teacher" placeholder="Teacher">
+
+        <input type="text" id="room" placeholder="Room">
+
+        <input type="number" id="startHour" placeholder="Start Hour">
+
+        <input type="number" id="endHour" placeholder="End Hour">
+
+        <button onclick="addClass()">Add Class</button>
+
+    </div>
+
+    <!-- MESSAGE -->
+    <h3 id="message"></h3>
+
+    <!-- CLASS TABLE -->
+    <table>
+
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Teacher</th>
+                <th>Room</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="classTableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+</html>
