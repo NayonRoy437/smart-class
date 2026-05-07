@@ -1,12 +1,9 @@
-import { db }
-from "./firebase.js";
+import { db } from "./firebase.js";
 
 import {
 collection,
 getDocs
-}
-
-from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
 
 export async function getCurrentAndNextClass(){
@@ -14,6 +11,10 @@ export async function getCurrentAndNextClass(){
     let now = new Date();
 
     let hour = now.getHours();
+
+    let minute = now.getMinutes();
+
+    let currentTime = hour + minute / 60;
 
     let snapshot =
     await getDocs(collection(db,"classes"));
@@ -23,49 +24,51 @@ export async function getCurrentAndNextClass(){
     snapshot.forEach(doc => {
 
         classes.push({
-
             id: doc.id,
-
             ...doc.data()
-
         });
 
     });
 
     // SORT BY START TIME
-    classes.sort(
-        (a,b) => a.startHour - b.startHour
+    classes.sort((a,b)=>
+        a.startHour - b.startHour
     );
 
     let current = null;
-
     let next = null;
+
+    let minGap = Infinity;
 
     for(let c of classes){
 
-        // CURRENT CLASS
-        if(
-            hour >= c.startHour &&
-            hour < c.endHour
-        ){
+        let start = c.startHour;
+        let end = c.endHour;
 
+        // CURRENT CLASS (more accurate)
+        if(
+            currentTime >= start &&
+            currentTime < end
+        ){
             current = c;
         }
 
-        // NEXT CLASS
-        if(
-            c.startHour > hour &&
-            !next
-        ){
+        // NEXT CLASS (closest future class)
+        if(start > currentTime){
 
-            next = c;
+            let gap = start - currentTime;
+
+            if(gap < minGap){
+
+                minGap = gap;
+
+                next = c;
+            }
         }
     }
 
     return {
-
         current,
         next
-
     };
 }
