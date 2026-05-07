@@ -251,3 +251,20 @@ th,td{
 .delete-btn{
     background:red;
 }
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:8px 12px;
+
+    border-radius:5px;
+}
+
+nav ul li a:hover{
+
+    background:white;
+
+    color:#1e3a8a;
+}
