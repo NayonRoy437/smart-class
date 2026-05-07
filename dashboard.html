@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Smart University Admin</title>
+    <title>Admin Panel</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,46 +12,67 @@
 
 <div class="container">
 
-    <h1>🎓 Smart University Admin Panel</h1>
+    <!-- SIDEBAR (optional future) -->
+    <div class="sidebar">
 
-    <!-- ADD CLASS FORM -->
-    <div class="form-box">
+        <h2>Admin Panel</h2>
 
-        <input type="text" id="subject" placeholder="Subject">
-
-        <input type="text" id="teacher" placeholder="Teacher">
-
-        <input type="text" id="room" placeholder="Room">
-
-        <input type="number" id="startHour" placeholder="Start Hour">
-
-        <input type="number" id="endHour" placeholder="End Hour">
-
-        <button onclick="addClass()">Add Class</button>
+        <ul>
+            <li>📊 Dashboard</li>
+            <li>📅 Classes</li>
+            <li>👨‍🏫 Teachers</li>
+            <li>⚙️ Settings</li>
+        </ul>
 
     </div>
 
-    <!-- MESSAGE -->
-    <h3 id="message"></h3>
+    <!-- MAIN -->
+    <div class="main">
 
-    <!-- CLASS TABLE -->
-    <table>
+        <h1>🎓 Smart University Admin</h1>
 
-        <thead>
-            <tr>
-                <th>Subject</th>
-                <th>Teacher</th>
-                <th>Room</th>
-                <th>Time</th>
-                <th>Action</th>
-            </tr>
-        </thead>
+        <!-- FORM -->
+        <div class="form-box">
 
-        <tbody id="classTableBody">
+            <input type="text" id="subject" placeholder="Subject">
 
-        </tbody>
+            <input type="text" id="teacher" placeholder="Teacher">
 
-    </table>
+            <input type="text" id="room" placeholder="Room">
+
+            <input type="number" id="startHour" placeholder="Start Hour">
+
+            <input type="number" id="endHour" placeholder="End Hour">
+
+            <button id="saveBtn" onclick="addClass()">
+                Add Class
+            </button>
+
+        </div>
+
+        <!-- MESSAGE -->
+        <h3 id="message"></h3>
+
+        <!-- TABLE -->
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Subject</th>
+                    <th>Teacher</th>
+                    <th>Room</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="classTableBody"></tbody>
+
+        </table>
+
+    </div>
 
 </div>
 
