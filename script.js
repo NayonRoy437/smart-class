@@ -8,10 +8,14 @@ function updateClock(){
     let dateEl =
     document.getElementById("date");
 
-    // SAFETY CHECK
     if(clockEl){
         clockEl.innerHTML =
-        now.toLocaleTimeString();
+        now.toLocaleTimeString("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
     }
 
     if(dateEl){
@@ -20,7 +24,5 @@ function updateClock(){
     }
 }
 
-setInterval(updateClock,1000);
-
+setInterval(updateClock, 1000);
 updateClock();
-<script src="script.js"></script>
