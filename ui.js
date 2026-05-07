@@ -1,19 +1,39 @@
-import { getCurrentAndNextClass } from "./scheduleEngine.js";
+import { getCurrentAndNextClass }
+from "./scheduleEngine.js";
 
 async function updateUI(){
 
-    let data = await getCurrentAndNextClass();
+    let data =
+    await getCurrentAndNextClass();
 
+    // CURRENT CLASS
     if(data.current){
+
         document.getElementById("current").innerHTML =
-        "Current: " + data.current.subject;
+        "📘 Current: " +
+        data.current.subject;
+
+    }else{
+
+        document.getElementById("current").innerHTML =
+        "❌ No Running Class";
     }
 
+    // NEXT CLASS
     if(data.next){
+
         document.getElementById("next").innerHTML =
-        "Next: " + data.next.subject;
+        "⏳ Next: " +
+        data.next.subject;
+
+    }else{
+
+        document.getElementById("next").innerHTML =
+        "🏁 No More Classes Today";
     }
 }
 
-setInterval(updateUI, 5000);
+// AUTO UPDATE
+setInterval(updateUI,5000);
+
 updateUI();
