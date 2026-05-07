@@ -23,3 +23,4 @@ function updateClock(){
 setInterval(updateClock,1000);
 
 updateClock();
+<script src="script.js"></script>
