@@ -1,5 +1,31 @@
 import { db } from "./firebase.js";
 let editId = null;
+<td>
+
+    <button
+    class="edit-btn"
+    onclick="editClass(
+    '${docSnap.id}',
+    '${c.subject}',
+    '${c.teacher}',
+    '${c.room}',
+    ${c.startHour},
+    ${c.endHour}
+    )">
+
+    Edit
+
+    </button>
+
+    <button
+    class="delete-btn"
+    onclick="deleteClass('${docSnap.id}')">
+
+    Delete
+
+    </button>
+
+</td>
 window.editClass = function(
 id,
 subject,
