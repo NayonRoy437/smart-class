@@ -1,5 +1,35 @@
 import { db } from "./firebase.js";
 let editId = null;
+window.editClass = function(
+id,
+subject,
+teacher,
+room,
+startHour,
+endHour
+){
+
+    editId = id;
+
+    document.getElementById("subject").value =
+    subject;
+
+    document.getElementById("teacher").value =
+    teacher;
+
+    document.getElementById("room").value =
+    room;
+
+    document.getElementById("startHour").value =
+    startHour;
+
+    document.getElementById("endHour").value =
+    endHour;
+
+    message.innerHTML =
+    "✏️ Editing Mode";
+
+};
 updateDoc
 import {
 
