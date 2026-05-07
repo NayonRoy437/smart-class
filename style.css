@@ -133,3 +133,121 @@ th,td{
 .edit-btn{
     background:green;
 }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+.container{
+    display:flex;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+
+    width:220px;
+
+    height:100vh;
+
+    background:#1e3a8a;
+
+    color:white;
+
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+
+    padding:15px 0;
+
+    cursor:pointer;
+}
+
+/* MAIN */
+
+.main{
+
+    flex:1;
+
+    background:#f3f4f6;
+
+    padding:20px;
+}
+
+/* TOPBAR */
+
+.topbar{
+
+    margin-bottom:20px;
+}
+
+/* FORM */
+
+.form-box{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(6,1fr);
+
+    gap:10px;
+
+    margin-bottom:20px;
+}
+
+input,button{
+
+    padding:10px;
+}
+
+button{
+
+    background:#1e3a8a;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+/* TABLE */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+}
+
+th,td{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:center;
+}
+
+/* BUTTONS */
+
+.edit-btn{
+    background:green;
+}
+
+.delete-btn{
+    background:red;
+}
