@@ -1,5 +1,14 @@
 import { db } from "./firebase.js";
+let result =
+hasConflict(allClasses,newClass);
 
+if(result.conflict){
+
+    message.innerHTML =
+    result.message;
+
+    return;
+}
 import { hasConflict }
 from "./conflict.js";
 
