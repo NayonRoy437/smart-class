@@ -1,4 +1,5 @@
 console.log("Clock Running");
+console.log("Clock Script Running");
 function updateClock(){
 
     let now = new Date();
