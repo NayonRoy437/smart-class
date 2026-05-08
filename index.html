@@ -2,15 +2,23 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <title>University Dashboard</title>
-    <script type="module" src="js/ui.js"></script>
+
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
 <a href="admin.html">
-    <button>Open Admin Panel</button>
+
+    <button>
+    Open Admin Panel
+    </button>
+
 </a>
 
 <div class="container">
@@ -21,12 +29,19 @@
         <h2>University</h2>
 
         <ul>
+
             <li>📊 Dashboard</li>
+
             <li>👨‍🏫 Teachers</li>
+
             <li>📚 Students</li>
+
             <li>📅 Schedule</li>
+
             <li>📢 Notice</li>
+
             <li>⚙️ Settings</li>
+
         </ul>
 
     </div>
@@ -34,7 +49,7 @@
     <!-- MAIN -->
     <div class="main">
 
-        <!-- TOP BAR -->
+        <!-- TOPBAR -->
         <div class="topbar">
 
             <h1>Dashboard</h1>
@@ -53,23 +68,35 @@
         <div class="cards">
 
             <div class="card">
+
                 <h3>Total Teachers</h3>
+
                 <h2 id="teachersCount">0</h2>
+
             </div>
 
             <div class="card">
+
                 <h3>Total Students</h3>
+
                 <h2 id="studentsCount">0</h2>
+
             </div>
 
             <div class="card">
+
                 <h3>Today Classes</h3>
+
                 <h2 id="classCount">0</h2>
+
             </div>
 
             <div class="card">
+
                 <h3>Rooms</h3>
+
                 <h2>8</h2>
+
             </div>
 
         </div>
@@ -82,10 +109,15 @@
             <table>
 
                 <tr>
+
                     <th>Subject</th>
+
                     <th>Teacher</th>
+
                     <th>Time</th>
+
                     <th>Status</th>
+
                 </tr>
 
                 <tbody id="scheduleTable">
@@ -100,8 +132,10 @@
 
 </div>
 
-<!-- ONLY ONE SCRIPT -->
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+
 <script type="module" src="js/ui.js"></script>
+
 </body>
-    <script src="script.js"></script>
 </html>
